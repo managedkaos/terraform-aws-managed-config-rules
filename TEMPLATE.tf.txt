@@ -1,0 +1,18 @@
+# Take a look at the following link for:
+# - _CONFIG_RULE_NAME_
+# - _CONFIG_RULE_DESCRIPTION_
+# - _AWS_SOURCE_IDENTIFIER_
+#
+# https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html
+
+resource "aws_config_config_rule" "_CONFIG_RULE_NAME_" {
+  name        = "_CONFIG_RULE_NAME_"
+  description = "_CONFIG_RULE_DESCRIPTION_"
+
+  source {
+    owner             = "AWS"
+    source_identifier = "_AWS_SOURCE_IDENTIFIER_"
+  }
+
+  depends_on = [aws_config_configuration_recorder.main]
+}
